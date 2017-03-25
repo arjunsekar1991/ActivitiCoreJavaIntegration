@@ -23,7 +23,7 @@ public class HelloWorld {
 			    System.out.println("ProcessEngine [" + pName + "] Version: [" + ver + "]");
 			    RepositoryService repositoryService = processEngine.getRepositoryService();
 			    Deployment deployment = repositoryService.createDeployment()
-			        .addClasspathResource("MyProcess.bpmn").deploy();
+			        .addClasspathResource("myprocess.bpmn20.xml").deploy();
 			    ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
 			        .deploymentId(deployment.getId()).singleResult();
 			    System.out.println(
@@ -32,8 +32,8 @@ public class HelloWorld {
 			            + processDefinition.getId() + "]");
 			    RuntimeService runtimeService = processEngine.getRuntimeService();
 			    ProcessInstance processInstance = runtimeService
-			        .startProcessInstanceById("activitiAdhoc:11:40004");
-			    System.out.println("Onboarding process started with process instance id [" 
+			        .startProcessInstanceById("activitiAdhoc:1:4");
+			    System.out.println(" process started with process instance id [" 
 			        + processInstance.getProcessInstanceId()
 			        + "] key [" + processInstance.getProcessDefinitionKey() + "]");
 	}
