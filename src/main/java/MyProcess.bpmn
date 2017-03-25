@@ -3,7 +3,7 @@
   <process id="activitiAdhoc" name="Adhoc Activiti Process" isExecutable="true">
     <endEvent id="theEnd"></endEvent>
     <startEvent id="startevent2" name="Start"></startEvent>
-    <scriptTask id="scripttask1" name="Script Task" scriptFormat="javascript" activiti:autoStoreVariables="false">
+    <scriptTask id="scripttask1" name="Script Task" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>System.out.println("Process script task executed successfully");</script>
     </scriptTask>
     <sequenceFlow id="flow1" sourceRef="startevent2" targetRef="scripttask1"></sequenceFlow>

@@ -32,7 +32,7 @@ public class HelloWorld {
 			            + processDefinition.getId() + "]");
 			    RuntimeService runtimeService = processEngine.getRuntimeService();
 			    ProcessInstance processInstance = runtimeService
-			        .startProcessInstanceByKey("onboarding");
+			        .startProcessInstanceById("activitiAdhoc:11:40004");
 			    System.out.println("Onboarding process started with process instance id [" 
 			        + processInstance.getProcessInstanceId()
 			        + "] key [" + processInstance.getProcessDefinitionKey() + "]");
